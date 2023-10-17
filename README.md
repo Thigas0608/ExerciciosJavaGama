@@ -1,4 +1,4 @@
-# Exercícios em Java
+# Lista 1 de exercícios em Java
 
 Neste repositório, você encontrará uma lista de exercícios em Java para praticar e aprimorar suas habilidades de programação. Abaixo, os exercícios:
 
