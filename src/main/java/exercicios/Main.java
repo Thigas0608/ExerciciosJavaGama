@@ -3,7 +3,6 @@ package exercicios;
 public class Main {
     public static void main(String[] args) {
 
-
         System.out.println("============== Ex1 ==============");
         imprimirNome("Thiago");
 
@@ -21,6 +20,14 @@ public class Main {
         // Modelos: X1, UNO, HB20.
         concessionaria("X1");
 
+        System.out.println("============== Ex6 ==============");
+        clubePesca(2,2);
+
+        System.out.println("============== Ex7 ==============");
+        duracaoDaRacao(50, 500);
+
+        System.out.println("============== Ex8 ==============");
+        minimercadoFerreirinha(200);
 
     }
 
@@ -44,8 +51,8 @@ public class Main {
 
     //Exercicio3
     public static void compra(int idadeUsuario) {
-
         int idadePadraoParaCompra = 16;
+
         if (idadeUsuario >= idadePadraoParaCompra) {
             System.out.println("Pode fazer a Compra");
         } else {
@@ -116,5 +123,45 @@ public class Main {
             default -> System.out.println("Modelo não encontrado");
         }
     }
+
+    //Exercicio6
+    public static void clubePesca(int pessoas, int peixe) {
+        int valorPeixeExtra = 0;
+
+        if (peixe > pessoas) {
+            valorPeixeExtra = 12 * (peixe - pessoas);
+        }
+        int valorDaConta = (pessoas * 20) + valorPeixeExtra;
+        System.out.printf("Uma família de %d pessoas pescou %d peixes, e seu valor total foi de R$ %.2f\n", pessoas, peixe, (double)valorDaConta);
+    }
+
+    //Exercicio7
+    public static void duracaoDaRacao(double pesoDaRcao, double consumoDiarioCachorro){
+        double pesoDaRacaoEmGramas = pesoDaRcao * 1000;
+        int duracaoEmDias = (int) (pesoDaRacaoEmGramas / consumoDiarioCachorro);
+        int sobra = (int) (pesoDaRacaoEmGramas % consumoDiarioCachorro);
+
+        System.out.printf("A duração da ração é: %d dias\n", duracaoEmDias);
+        if (sobra == 0){
+            System.out.println("Não sobrou nenhuma ração. Compre mais. ");
+        }
+        else {
+            System.out.printf("A quantidade que sobrou é: %d g", sobra);
+        }
+    }
+
+    //Exercicio8
+    public static void minimercadoFerreirinha(double valorTotal) {
+        if (valorTotal < 20.0) {
+            System.out.println("O valor mínimo para parcelamento é de R$ 20,00.");
+        } else {
+            int numeroMaximoParcelas = (int) (valorTotal / 20);
+            double valorParcela = valorTotal / numeroMaximoParcelas;
+
+            System.out.println("Número máximo de parcelas: " + numeroMaximoParcelas);
+            System.out.printf("Valor de cada parcela: R$ %.2f\n", valorParcela);
+        }
+    }
+
 }
 
