@@ -6,9 +6,13 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ExerciciosJavaGama" />
         <module name="Exercicios" />
+        <module name="Lista2" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Exercicios" target="17" />
+      <module name="Lista2" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>
